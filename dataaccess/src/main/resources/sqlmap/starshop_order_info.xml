@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.starich.dataaccess.dao.mysql.StarShopOrderInfoDAO">
+
+<!--auto generated Code-->
+    <resultMap id="AllColumnMap" type="com.starich.dataaccess.domain.dbo.StarShopOrderInfo">
+        <result column="id" property="id"/>
+        <result column="room_id" property="roomId"/>
+        <result column="user_id" property="userId"/>
+        <result column="nick_name" property="nickName"/>
+        <result column="anchor_source" property="anchorSource"/>
+        <result column="order_sn" property="orderSn"/>
+        <result column="order_id" property="orderId"/>
+        <result column="sale_from" property="saleFrom"/>
+        <result column="sale_type" property="saleType"/>
+        <result column="sale_label" property="saleLabel"/>
+        <result column="platform" property="platform"/>
+        <result column="product_id" property="productId"/>
+        <result column="product_name" property="productName"/>
+        <result column="sku_no" property="skuNo"/>
+        <result column="brand_id" property="brandId"/>
+        <result column="brand_name" property="brandName"/>
+        <result column="merchant_id" property="merchantId"/>
+        <result column="deal_hash_id" property="dealHashId"/>
+        <result column="sku_category" property="skuCategory"/>
+        <result column="payer" property="payer"/>
+        <result column="quantity" property="quantity"/>
+        <result column="settlement_price" property="settlementPrice"/>
+        <result column="payment_time" property="paymentTime"/>
+        <result column="pay_day" property="payDay"/>
+        <result column="cancel_time" property="cancelTime"/>
+        <result column="fee_ratio" property="feeRatio"/>
+        <result column="refund_quantity" property="refundQuantity"/>
+        <result column="refund_amount" property="refundAmount"/>
+        <result column="divid_sku_amount" property="dividSkuAmount"/>
+        <result column="fee_amount" property="feeAmount"/>
+        <result column="unique_key" property="uniqueKey"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="shipping_system_id" property="shippingSystemId"/>
+        <result column="shipping_no" property="shippingNo"/>
+        <result column="shipping_initial_time" property="shippingInitialTime"/>
+        <result column="deliver_time" property="deliverTime"/>
+        <result column="is_cancel_before_deliver" property="isCancelBeforeDeliver"/>
+        <result column="order_type" property="orderType"/>
+        <result column="deal_price" property="dealPrice"/>
+        <result column="commission_time" property="commissionTime"/>
+        <result column="commission_status" property="commissionStatus"/>
+        <result column="merchant_settlement_status" property="merchantSettlementStatus"/>
+        <result column="merchant_settlement_bill_no" property="merchantSettlementBillNo"/>
+    </resultMap>
+
+<!--auto generated Code-->
+    <sql id="all_column">
+        id,
+        room_id,
+        user_id,
+        nick_name,
+        anchor_source,
+        order_sn,
+        order_id,
+        sale_from,
+        sale_type,
+        sale_label,
+        platform,
+        product_id,
+        product_name,
+        sku_no,
+        brand_id,
+        brand_name,
+        merchant_id,
+        deal_hash_id,
+        sku_category,
+        payer,
+        quantity,
+        settlement_price,
+        payment_time,
+        pay_day,
+        cancel_time,
+        fee_ratio,
+        refund_quantity,
+        refund_amount,
+        divid_sku_amount,
+        fee_amount,
+        unique_key,
+        create_time,
+        update_time,
+        shipping_system_id,
+        shipping_no,
+        shipping_initial_time,
+        deliver_time,
+        is_cancel_before_deliver,
+        order_type,
+        deal_price,
+        commission_time,
+        commission_status,
+        merchant_settlement_status,
+        merchant_settlement_bill_no
+    </sql>
+
+<!--auto generated Code-->
+    <insert id="insert">
+        INSERT INTO starshop_order_info
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="pojo.id != null"> id, </if>
+            <if test="pojo.roomId != null"> room_id, </if>
+            <if test="pojo.userId != null"> user_id, </if>
+            <if test="pojo.nickName != null"> nick_name, </if>
+            <if test="pojo.anchorSource != null"> anchor_source, </if>
+            <if test="pojo.orderSn != null"> order_sn, </if>
+            <if test="pojo.orderId != null"> order_id, </if>
+            <if test="pojo.saleFrom != null"> sale_from, </if>
+            <if test="pojo.saleType != null"> sale_type, </if>
+            <if test="pojo.saleLabel != null"> sale_label, </if>
+            <if test="pojo.platform != null"> platform, </if>
+            <if test="pojo.productId != null"> product_id, </if>
+            <if test="pojo.productName != null"> product_name, </if>
+            <if test="pojo.skuNo != null"> sku_no, </if>
+            <if test="pojo.brandId != null"> brand_id, </if>
+            <if test="pojo.brandName != null"> brand_name, </if>
+            <if test="pojo.merchantId != null"> merchant_id, </if>
+            <if test="pojo.dealHashId != null"> deal_hash_id, </if>
+            <if test="pojo.skuCategory != null"> sku_category, </if>
+            <if test="pojo.payer != null"> payer, </if>
+            <if test="pojo.quantity != null"> quantity, </if>
+            <if test="pojo.settlementPrice != null"> settlement_price, </if>
+            <if test="pojo.paymentTime != null"> payment_time, </if>
+            <if test="pojo.payDay != null"> pay_day, </if>
+            <if test="pojo.cancelTime != null"> cancel_time, </if>
+            <if test="pojo.feeRatio != null"> fee_ratio, </if>
+            <if test="pojo.refundQuantity != null"> refund_quantity, </if>
+            <if test="pojo.refundAmount != null"> refund_amount, </if>
+            <if test="pojo.dividSkuAmount != null"> divid_sku_amount, </if>
+            <if test="pojo.feeAmount != null"> fee_amount, </if>
+            <if test="pojo.uniqueKey != null"> unique_key, </if>
+            <if test="pojo.createTime != null"> create_time, </if>
+            <if test="pojo.updateTime != null"> update_time, </if>
+            <if test="pojo.shippingSystemId != null"> shipping_system_id, </if>
+            <if test="pojo.shippingNo != null"> shipping_no, </if>
+            <if test="pojo.shippingInitialTime != null"> shipping_initial_time, </if>
+            <if test="pojo.deliverTime != null"> deliver_time, </if>
+            <if test="pojo.isCancelBeforeDeliver != null"> is_cancel_before_deliver, </if>
+            <if test="pojo.orderType != null"> order_type, </if>
+            <if test="pojo.dealPrice != null"> deal_price, </if>
+            <if test="pojo.commissionTime != null"> commission_time, </if>
+            <if test="pojo.commissionStatus != null"> commission_status, </if>
+            <if test="pojo.merchantSettlementStatus != null"> merchant_settlement_status, </if>
+            <if test="pojo.merchantSettlementBillNo != null"> merchant_settlement_bill_no, </if>
+        </trim>
+        VALUES
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="pojo.id != null"> #{pojo.id}, </if>
+            <if test="pojo.roomId != null"> #{pojo.roomId}, </if>
+            <if test="pojo.userId != null"> #{pojo.userId}, </if>
+            <if test="pojo.nickName != null"> #{pojo.nickName}, </if>
+            <if test="pojo.anchorSource != null"> #{pojo.anchorSource}, </if>
+            <if test="pojo.orderSn != null"> #{pojo.orderSn}, </if>
+            <if test="pojo.orderId != null"> #{pojo.orderId}, </if>
+            <if test="pojo.saleFrom != null"> #{pojo.saleFrom}, </if>
+            <if test="pojo.saleType != null"> #{pojo.saleType}, </if>
+            <if test="pojo.saleLabel != null"> #{pojo.saleLabel}, </if>
+            <if test="pojo.platform != null"> #{pojo.platform}, </if>
+            <if test="pojo.productId != null"> #{pojo.productId}, </if>
+            <if test="pojo.productName != null"> #{pojo.productName}, </if>
+            <if test="pojo.skuNo != null"> #{pojo.skuNo}, </if>
+            <if test="pojo.brandId != null"> #{pojo.brandId}, </if>
+            <if test="pojo.brandName != null"> #{pojo.brandName}, </if>
+            <if test="pojo.merchantId != null"> #{pojo.merchantId}, </if>
+            <if test="pojo.dealHashId != null"> #{pojo.dealHashId}, </if>
+            <if test="pojo.skuCategory != null"> #{pojo.skuCategory}, </if>
+            <if test="pojo.payer != null"> #{pojo.payer}, </if>
+            <if test="pojo.quantity != null"> #{pojo.quantity}, </if>
+            <if test="pojo.settlementPrice != null"> #{pojo.settlementPrice}, </if>
+            <if test="pojo.paymentTime != null"> #{pojo.paymentTime}, </if>
+            <if test="pojo.payDay != null"> #{pojo.payDay}, </if>
+            <if test="pojo.cancelTime != null"> #{pojo.cancelTime}, </if>
+            <if test="pojo.feeRatio != null"> #{pojo.feeRatio}, </if>
+            <if test="pojo.refundQuantity != null"> #{pojo.refundQuantity}, </if>
+            <if test="pojo.refundAmount != null"> #{pojo.refundAmount}, </if>
+            <if test="pojo.dividSkuAmount != null"> #{pojo.dividSkuAmount}, </if>
+            <if test="pojo.feeAmount != null"> #{pojo.feeAmount}, </if>
+            <if test="pojo.uniqueKey != null"> #{pojo.uniqueKey}, </if>
+            <if test="pojo.createTime != null"> #{pojo.createTime}, </if>
+            <if test="pojo.updateTime != null"> #{pojo.updateTime}, </if>
+            <if test="pojo.shippingSystemId != null"> #{pojo.shippingSystemId}, </if>
+            <if test="pojo.shippingNo != null"> #{pojo.shippingNo}, </if>
+            <if test="pojo.shippingInitialTime != null"> #{pojo.shippingInitialTime}, </if>
+            <if test="pojo.deliverTime != null"> #{pojo.deliverTime}, </if>
+            <if test="pojo.isCancelBeforeDeliver != null"> #{pojo.isCancelBeforeDeliver}, </if>
+            <if test="pojo.orderType != null"> #{pojo.orderType}, </if>
+            <if test="pojo.dealPrice != null"> #{pojo.dealPrice}, </if>
+            <if test="pojo.commissionTime != null"> #{pojo.commissionTime}, </if>
+            <if test="pojo.commissionStatus != null"> #{pojo.commissionStatus}, </if>
+            <if test="pojo.merchantSettlementStatus != null"> #{pojo.merchantSettlementStatus}, </if>
+            <if test="pojo.merchantSettlementBillNo != null"> #{pojo.merchantSettlementBillNo}, </if>
+        </trim>
+    </insert>
+
+<!--auto generated Code-->
+    <insert id="insertList">
+        INSERT INTO starshop_order_info(
+        <include refid="all_column"/>
+        )VALUES
+        <foreach collection="pojos" item="pojo" index="index" separator=",">
+            (
+            #{pojo.id},
+            #{pojo.roomId},
+            #{pojo.userId},
+            #{pojo.nickName},
+            #{pojo.anchorSource},
+            #{pojo.orderSn},
+            #{pojo.orderId},
+            #{pojo.saleFrom},
+            #{pojo.saleType},
+            #{pojo.saleLabel},
+            #{pojo.platform},
+            #{pojo.productId},
+            #{pojo.productName},
+            #{pojo.skuNo},
+            #{pojo.brandId},
+            #{pojo.brandName},
+            #{pojo.merchantId},
+            #{pojo.dealHashId},
+            #{pojo.skuCategory},
+            #{pojo.payer},
+            #{pojo.quantity},
+            #{pojo.settlementPrice},
+            #{pojo.paymentTime},
+            #{pojo.payDay},
+            #{pojo.cancelTime},
+            #{pojo.feeRatio},
+            #{pojo.refundQuantity},
+            #{pojo.refundAmount},
+            #{pojo.dividSkuAmount},
+            #{pojo.feeAmount},
+            #{pojo.uniqueKey},
+            #{pojo.createTime},
+            #{pojo.updateTime},
+            #{pojo.shippingSystemId},
+            #{pojo.shippingNo},
+            #{pojo.shippingInitialTime},
+            #{pojo.deliverTime},
+            #{pojo.isCancelBeforeDeliver},
+            #{pojo.orderType},
+            #{pojo.dealPrice},
+            #{pojo.commissionTime},
+            #{pojo.commissionStatus},
+            #{pojo.merchantSettlementStatus},
+            #{pojo.merchantSettlementBillNo}
+            )
+        </foreach>
+    </insert>
+
+<!--auto generated Code-->
+    <update id="update">
+        UPDATE starshop_order_info
+        <set>
+            <if test="pojo.id != null"> id = #{pojo.id}, </if>
+            <if test="pojo.roomId != null"> room_id = #{pojo.roomId}, </if>
+            <if test="pojo.userId != null"> user_id = #{pojo.userId}, </if>
+            <if test="pojo.nickName != null"> nick_name = #{pojo.nickName}, </if>
+            <if test="pojo.anchorSource != null"> anchor_source = #{pojo.anchorSource}, </if>
+            <if test="pojo.orderSn != null"> order_sn = #{pojo.orderSn}, </if>
+            <if test="pojo.orderId != null"> order_id = #{pojo.orderId}, </if>
+            <if test="pojo.saleFrom != null"> sale_from = #{pojo.saleFrom}, </if>
+            <if test="pojo.saleType != null"> sale_type = #{pojo.saleType}, </if>
+            <if test="pojo.saleLabel != null"> sale_label = #{pojo.saleLabel}, </if>
+            <if test="pojo.platform != null"> platform = #{pojo.platform}, </if>
+            <if test="pojo.productId != null"> product_id = #{pojo.productId}, </if>
+            <if test="pojo.productName != null"> product_name = #{pojo.productName}, </if>
+            <if test="pojo.skuNo != null"> sku_no = #{pojo.skuNo}, </if>
+            <if test="pojo.brandId != null"> brand_id = #{pojo.brandId}, </if>
+            <if test="pojo.brandName != null"> brand_name = #{pojo.brandName}, </if>
+            <if test="pojo.merchantId != null"> merchant_id = #{pojo.merchantId}, </if>
+            <if test="pojo.dealHashId != null"> deal_hash_id = #{pojo.dealHashId}, </if>
+            <if test="pojo.skuCategory != null"> sku_category = #{pojo.skuCategory}, </if>
+            <if test="pojo.payer != null"> payer = #{pojo.payer}, </if>
+            <if test="pojo.quantity != null"> quantity = #{pojo.quantity}, </if>
+            <if test="pojo.settlementPrice != null"> settlement_price = #{pojo.settlementPrice}, </if>
+            <if test="pojo.paymentTime != null"> payment_time = #{pojo.paymentTime}, </if>
+            <if test="pojo.payDay != null"> pay_day = #{pojo.payDay}, </if>
+            <if test="pojo.cancelTime != null"> cancel_time = #{pojo.cancelTime}, </if>
+            <if test="pojo.feeRatio != null"> fee_ratio = #{pojo.feeRatio}, </if>
+            <if test="pojo.refundQuantity != null"> refund_quantity = #{pojo.refundQuantity}, </if>
+            <if test="pojo.refundAmount != null"> refund_amount = #{pojo.refundAmount}, </if>
+            <if test="pojo.dividSkuAmount != null"> divid_sku_amount = #{pojo.dividSkuAmount}, </if>
+            <if test="pojo.feeAmount != null"> fee_amount = #{pojo.feeAmount}, </if>
+            <if test="pojo.uniqueKey != null"> unique_key = #{pojo.uniqueKey}, </if>
+            <if test="pojo.createTime != null"> create_time = #{pojo.createTime}, </if>
+            <if test="pojo.updateTime != null"> update_time = #{pojo.updateTime}, </if>
+            <if test="pojo.shippingSystemId != null"> shipping_system_id = #{pojo.shippingSystemId}, </if>
+            <if test="pojo.shippingNo != null"> shipping_no = #{pojo.shippingNo}, </if>
+            <if test="pojo.shippingInitialTime != null"> shipping_initial_time = #{pojo.shippingInitialTime}, </if>
+            <if test="pojo.deliverTime != null"> deliver_time = #{pojo.deliverTime}, </if>
+            <if test="pojo.isCancelBeforeDeliver != null"> is_cancel_before_deliver = #{pojo.isCancelBeforeDeliver}, </if>
+            <if test="pojo.orderType != null"> order_type = #{pojo.orderType}, </if>
+            <if test="pojo.dealPrice != null"> deal_price = #{pojo.dealPrice}, </if>
+            <if test="pojo.commissionTime != null"> commission_time = #{pojo.commissionTime}, </if>
+            <if test="pojo.commissionStatus != null"> commission_status = #{pojo.commissionStatus}, </if>
+            <if test="pojo.merchantSettlementStatus != null"> merchant_settlement_status = #{pojo.merchantSettlementStatus}, </if>
+            <if test="pojo.merchantSettlementBillNo != null"> merchant_settlement_bill_no = #{pojo.merchantSettlementBillNo} </if>
+        </set>
+         WHERE id = #{pojo.id}
+    </update>
+
+<!--auto generated Code-->
+    <select id="select" resultMap="AllColumnMap">
+        SELECT <include refid="all_column"/>
+        FROM starshop_order_info
+        <where>
+            <if test="pojo.id != null"> AND id = #{pojo.id} </if>
+            <if test="pojo.roomId != null"> AND room_id = #{pojo.roomId} </if>
+            <if test="pojo.userId != null"> AND user_id = #{pojo.userId} </if>
+            <if test="pojo.nickName != null"> AND nick_name = #{pojo.nickName} </if>
+            <if test="pojo.anchorSource != null"> AND anchor_source = #{pojo.anchorSource} </if>
+            <if test="pojo.orderSn != null"> AND order_sn = #{pojo.orderSn} </if>
+            <if test="pojo.orderId != null"> AND order_id = #{pojo.orderId} </if>
+            <if test="pojo.saleFrom != null"> AND sale_from = #{pojo.saleFrom} </if>
+            <if test="pojo.saleType != null"> AND sale_type = #{pojo.saleType} </if>
+            <if test="pojo.saleLabel != null"> AND sale_label = #{pojo.saleLabel} </if>
+            <if test="pojo.platform != null"> AND platform = #{pojo.platform} </if>
+            <if test="pojo.productId != null"> AND product_id = #{pojo.productId} </if>
+            <if test="pojo.productName != null"> AND product_name = #{pojo.productName} </if>
+            <if test="pojo.skuNo != null"> AND sku_no = #{pojo.skuNo} </if>
+            <if test="pojo.brandId != null"> AND brand_id = #{pojo.brandId} </if>
+            <if test="pojo.brandName != null"> AND brand_name = #{pojo.brandName} </if>
+            <if test="pojo.merchantId != null"> AND merchant_id = #{pojo.merchantId} </if>
+            <if test="pojo.dealHashId != null"> AND deal_hash_id = #{pojo.dealHashId} </if>
+            <if test="pojo.skuCategory != null"> AND sku_category = #{pojo.skuCategory} </if>
+            <if test="pojo.payer != null"> AND payer = #{pojo.payer} </if>
+            <if test="pojo.quantity != null"> AND quantity = #{pojo.quantity} </if>
+            <if test="pojo.settlementPrice != null"> AND settlement_price = #{pojo.settlementPrice} </if>
+            <if test="pojo.paymentTime != null"> AND payment_time = #{pojo.paymentTime} </if>
+            <if test="pojo.payDay != null"> AND pay_day = #{pojo.payDay} </if>
+            <if test="pojo.cancelTime != null"> AND cancel_time = #{pojo.cancelTime} </if>
+            <if test="pojo.feeRatio != null"> AND fee_ratio = #{pojo.feeRatio} </if>
+            <if test="pojo.refundQuantity != null"> AND refund_quantity = #{pojo.refundQuantity} </if>
+            <if test="pojo.refundAmount != null"> AND refund_amount = #{pojo.refundAmount} </if>
+            <if test="pojo.dividSkuAmount != null"> AND divid_sku_amount = #{pojo.dividSkuAmount} </if>
+            <if test="pojo.feeAmount != null"> AND fee_amount = #{pojo.feeAmount} </if>
+            <if test="pojo.uniqueKey != null"> AND unique_key = #{pojo.uniqueKey} </if>
+            <if test="pojo.createTime != null"> AND create_time = #{pojo.createTime} </if>
+            <if test="pojo.updateTime != null"> AND update_time = #{pojo.updateTime} </if>
+            <if test="pojo.shippingSystemId != null"> AND shipping_system_id = #{pojo.shippingSystemId} </if>
+            <if test="pojo.shippingNo != null"> AND shipping_no = #{pojo.shippingNo} </if>
+            <if test="pojo.shippingInitialTime != null"> AND shipping_initial_time = #{pojo.shippingInitialTime} </if>
+            <if test="pojo.deliverTime != null"> AND deliver_time = #{pojo.deliverTime} </if>
+            <if test="pojo.isCancelBeforeDeliver != null"> AND is_cancel_before_deliver = #{pojo.isCancelBeforeDeliver} </if>
+            <if test="pojo.orderType != null"> AND order_type = #{pojo.orderType} </if>
+            <if test="pojo.dealPrice != null"> AND deal_price = #{pojo.dealPrice} </if>
+            <if test="pojo.commissionTime != null"> AND commission_time = #{pojo.commissionTime} </if>
+            <if test="pojo.commissionStatus != null"> AND commission_status = #{pojo.commissionStatus} </if>
+            <if test="pojo.merchantSettlementStatus != null"> AND merchant_settlement_status = #{pojo.merchantSettlementStatus} </if>
+            <if test="pojo.merchantSettlementBillNo != null"> AND merchant_settlement_bill_no = #{pojo.merchantSettlementBillNo} </if>
+        </where>
+    </select>
+
+<!--auto generated Code-->
+    <delete id="delete">
+        DELETE FROM starshop_order_info where id = #{pojo.id}
+    </delete>
+</mapper>

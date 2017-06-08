@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/api-server/api-server.iml" filepath="$PROJECT_DIR$/api-server/api-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/batch/batch.iml" filepath="$PROJECT_DIR$/batch/batch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/codewars/codewars.iml" filepath="$PROJECT_DIR$/codewars/codewars.iml" />
+      <module fileurl="file://$PROJECT_DIR$/component/component.iml" filepath="$PROJECT_DIR$/component/component.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dataaccess/dataaccess.iml" filepath="$PROJECT_DIR$/dataaccess/dataaccess.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven-project.iml" filepath="$PROJECT_DIR$/maven-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/netty/netty.iml" filepath="$PROJECT_DIR$/netty/netty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot/springboot.iml" filepath="$PROJECT_DIR$/springboot/springboot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/standalone/standalone.iml" filepath="$PROJECT_DIR$/standalone/standalone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tomcat/tomcat.iml" filepath="$PROJECT_DIR$/tomcat/tomcat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/worker/worker.iml" filepath="$PROJECT_DIR$/worker/worker.iml" />
+    </modules>
+  </component>
+</project>

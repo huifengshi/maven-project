@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="api-server" />
+        <module name="batch" />
+        <module name="codewars" />
+        <module name="component" />
+        <module name="core" />
+        <module name="data-access" />
+        <module name="dataaccess" />
+        <module name="netty" />
+        <module name="springboot" />
+        <module name="standalone" />
+        <module name="tomcat" />
+        <module name="worker" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="api-server" target="1.8" />
+      <module name="batch" target="1.8" />
+      <module name="codewars" target="1.8" />
+      <module name="component" target="1.8" />
+      <module name="core" target="1.8" />
+      <module name="dataaccess" target="1.8" />
+      <module name="maven-project" target="1.5" />
+      <module name="netty" target="1.8" />
+      <module name="springboot" target="1.8" />
+      <module name="standalone" target="1.8" />
+      <module name="tomcat" target="1.8" />
+      <module name="worker" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
