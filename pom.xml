@@ -37,6 +37,7 @@
         <module>standalone</module>
         <module>tomcat</module>
         <module>springboot</module>
+        <module>jdk</module>
     </modules>
 
 
