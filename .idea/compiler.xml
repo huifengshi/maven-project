@@ -11,11 +11,10 @@
         <module name="codewars" />
         <module name="component" />
         <module name="core" />
-        <module name="data-access" />
         <module name="dataaccess" />
         <module name="netty" />
         <module name="springboot" />
-        <module name="standalone" />
+        <module name="stand-alone" />
         <module name="tomcat" />
         <module name="worker" />
       </profile>
@@ -30,7 +29,7 @@
       <module name="maven-project" target="1.5" />
       <module name="netty" target="1.8" />
       <module name="springboot" target="1.8" />
-      <module name="standalone" target="1.8" />
+      <module name="stand-alone" target="1.8" />
       <module name="tomcat" target="1.8" />
       <module name="worker" target="1.8" />
     </bytecodeTargetLevel>
