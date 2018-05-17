@@ -38,6 +38,7 @@
         <module>tomcat</module>
         <module>springboot</module>
         <module>jdk</module>
+        <module>fastjson</module>
     </modules>
 
 
